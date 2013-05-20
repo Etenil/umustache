@@ -68,7 +68,7 @@ Note that the section tags have no effect in the whitespace.
 
 Section tags can also be (mis)used as an if block like so:
 
-    array('true' => array(0), 'false' => null)
+    array('true' => array(true), 'false' => array())
 
     {{true}}
         Yes that's true!
