@@ -52,6 +52,9 @@ function umustache_render($content, array $vars) {
         }
     }
 
+    // Cleaning up.
+    $content = preg_replace('/\{\{.+?\}\}/', '', $content);
+
     return $content;
 }
 
