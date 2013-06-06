@@ -8,11 +8,11 @@ function umustache_render($content, array $vars) {
         if(is_array($value)) { // Looping on array.
             // Seeking the matching tag.
             $start = strpos($content, '{{'.$name.'}}');
-            if($start === null) {
+            if($start === false) {
                 continue;
             }
             $stop = strpos($content, '{{/'.$name.'}}');
-            if($stop === null) {
+            if($stop === false) {
                 str_replace('{{'.$name.'}}', '', $content);
                 continue;
             }

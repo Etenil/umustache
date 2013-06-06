@@ -49,5 +49,14 @@ assertEqual(
     'foo'
 );
 
+printpad("Testing empty recursive...");
+assertEqual(
+    umustache_render("Foo {{bar}}", array(
+        'thing' => array(),
+        'bar' => 'bar',
+    )),
+    'Foo bar'
+);
+
 echo PHP_EOL;
 
